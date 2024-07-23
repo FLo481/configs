@@ -1,0 +1,5 @@
+input-remapper-git
+jellyfin-media-player
+tidal-hifi-bin
+yay-bin
+yay-bin-debug
