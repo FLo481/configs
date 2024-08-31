@@ -47,3 +47,5 @@ LC_ALL=
 ```
 
 A workaround to solve this issue is to edit /usr/share/applications/PrusaSlicer.desktop and change Exec=prusa-slicer %F to Exec=LC_ALL=en_GB.UTF8 prusa-slicer %F.
+
+LC_ALL is only for troubhleshooting purposes https://wiki.archlinux.org/title/Locale#LC_ALL:_troubleshooting
