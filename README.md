@@ -49,3 +49,9 @@ LC_ALL=
 A workaround to solve this issue is to edit /usr/share/applications/PrusaSlicer.desktop and change Exec=prusa-slicer %F to Exec=LC_ALL=en_GB.UTF8 prusa-slicer %F.
 
 LC_ALL is only for troubleshooting purposes https://wiki.archlinux.org/title/Locale#LC_ALL:_troubleshooting
+
+## Fixing Jellyfin Media Player black screen
+
+Using Exec=__EGL_VENDOR_LIBRARY_FILENAMES=/usr/share/glvnd/egl_vendor.d/50_mesa.json jellyfinmediaplayer in /usr/share/applications/com.github.iwalton3.jellyfin-media-player.desktop seems to work (cf. https://github.com/jellyfin/jellyfin-media-player/issues/165).
+
+Another workaround would be to use jellyfinmediaplayer --disable-gpu.
