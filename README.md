@@ -28,21 +28,22 @@ locale::facet::_S_create_c_locale name not valid
 
 The problem is that LC_ALL is not set
 ```
-[flo@archlinuxbtw applications]$ locale
-LANG=en_US.UTF-8
-LC_CTYPE="en_US.UTF-8"
-LC_NUMERIC="en_US.UTF-8"
-LC_TIME="en_US.UTF-8"
-LC_COLLATE="en_US.UTF-8"
-LC_MONETARY="en_US.UTF-8"
-LC_MESSAGES="en_US.UTF-8"
-LC_PAPER="en_US.UTF-8"
-LC_NAME="en_US.UTF-8"
-LC_ADDRESS="en_US.UTF-8"
-LC_TELEPHONE="en_US.UTF-8"
-LC_MEASUREMENT="en_US.UTF-8"
-LC_IDENTIFICATION="en_US.UTF-8"
-LC_ALL=en_US.UTF-8
+[flo@archlinuxbtw ~]$ locale
+locale: Cannot set LC_ALL to default locale: No such file or directory
+LANG=en_GB.UTF-8
+LC_CTYPE="en_GB.UTF-8"
+LC_NUMERIC="en_GB.UTF-8"
+LC_TIME=de_DE.UTF-8
+LC_COLLATE="en_GB.UTF-8"
+LC_MONETARY=de_DE.UTF-8
+LC_MESSAGES="en_GB.UTF-8"
+LC_PAPER="en_GB.UTF-8"
+LC_NAME="en_GB.UTF-8"
+LC_ADDRESS="en_GB.UTF-8"
+LC_TELEPHONE="en_GB.UTF-8"
+LC_MEASUREMENT="en_GB.UTF-8"
+LC_IDENTIFICATION="en_GB.UTF-8"
+LC_ALL=
 ```
 
 A workaround to solve this issue is to edit /usr/share/applications/PrusaSlicer.desktop and change Exec=prusa-slicer %F to Exec=LC_ALL=en_GB.UTF8 prusa-slicer %F.
