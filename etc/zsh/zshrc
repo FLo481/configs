@@ -1,0 +1,7 @@
+export LC_ALL=en_US.UTF-8
+
+PROMPT="[%n@%m ~]$ "
+
+alias ls='ls --color=auto'
+alias ll="ls -la"
+alias grep='grep --color=auto'
